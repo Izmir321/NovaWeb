@@ -1,8 +1,8 @@
 function Services() {
   return (
     <section>
-      <p>Våra tjänster</p>
-      <h2>Webblösningar för företag</h2>
+      <p>Vad vi erbjuder</p>
+      <h2>Digitala tjänster för moderna företag </h2>
 
       <div className="services-grid">
         <article>
