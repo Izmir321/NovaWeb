@@ -14,6 +14,7 @@ function Pricing() {
             <li>Responsiv design</li>
             <li>Kontaktformulär</li>
           </ul>
+          <button>Boka konsultation</button>
         </article>
 
         <article className="pricing-card">
@@ -25,6 +26,7 @@ function Pricing() {
             <li>SEO-grund</li>
             <li>API-koppling vid behov</li>
           </ul>
+          <button>Boka konsultation</button>
         </article>
 
         <article className="pricing-card">
@@ -36,9 +38,35 @@ function Pricing() {
             <li>Felsökning</li>
             <li>Teknisk support</li>
           </ul>
+          <button>Boka konsultation</button>
         </article>
       </div>
+      <section className="special-package">
+
+  <span>Populär lösning</span>
+
+  <h2>Speciallösningar & Uppgraderingar</h2>
+
+  <p>
+    För företag som vill modernisera sin nuvarande webbplats,
+    förbättra prestanda eller lägga till nya funktioner.
+  </p>
+
+  <h3>Från 800 kr/h</h3>
+
+  <div className="special-tags">
+    <p>UI/UX</p>
+    <p>SEO</p>
+    <p>API Integration</p>
+    <p>Performance</p>
+    <p>Support</p>
+  </div>
+
+  <button>Boka konsultation</button>
+
+</section>
     </section>
+    
   )
 }
 

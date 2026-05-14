@@ -541,13 +541,15 @@ button:hover {
   border: 1px solid #1e293b;
   border-radius: 20px;
   overflow: hidden;
+  max-width: 900px;
+  margin: auto;
 }
 
 .showcase-card img {
   width: 100%;
-  height: 480px;
-  object-fit: cover;
-  display: block;
+  height: 400px;
+  object-fit: contain;
+  background: #0f172a;
 }
 
 .showcase-content {
@@ -601,4 +603,99 @@ button:hover {
   .showcase-card img {
     height: 260px;
   }
+}
+
+.pricing-card button {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #6366f1;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pricing-card button:hover {
+  background: #7c83ff;
+  transform: translateY(-2px);
+}
+
+.special-package {
+  margin-top: 60px;
+  padding: 50px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #111827, #1e1b4b);
+  border: 1px solid #3730a3;
+  text-align: center;
+}
+
+.special-package span {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.2);
+  color: #818cf8;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.special-package h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.special-package p {
+  max-width: 700px;
+  margin: auto;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.special-package h3 {
+  margin-top: 30px;
+  font-size: 2rem;
+  color: #818cf8;
+}
+
+.special-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px auto 0;
+  max-width: 700px;
+}
+
+.special-tags p {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(129, 140, 248, 0.35);
+  color: #c7d2fe;
+  width: fit-content;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.special-package button {
+  margin-top: 35px;
+  padding: 16px 36px;
+  border: none;
+  border-radius: 14px;
+  background: #6366f1;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.special-package button:hover {
+  background: #7c83ff;
+  transform: translateY(-2px);
 }

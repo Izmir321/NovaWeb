@@ -1,20 +1,32 @@
 import { useState } from 'react'
+import byggImg from '../assets/byggImg.png'
+import gymImg from '../assets/gymImg.png'
+import kommandeImg from '../assets/kommandeImg.png'
+import restaurangImg from '../assets/resturangImg.png'
 
 const projectImages = [
   {
     title: 'Nova Restaurant',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4',
+    image: restaurangImg,
     text: 'Modern restauranghemsida med meny och bokningssektion.'
   },
+
   {
     title: 'Nordic Build',
-    image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72',
+    image: byggImg,
     text: 'Professionell företagssida för byggbranschen.'
   },
+
   {
     title: 'Pixel Fitness',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b',
-    text: 'Webbplats för träningsstudio med kontaktformulär.'
+    image: gymImg,
+    text: 'Webbplats för träningsstudio med medlemskap och kontaktformulär.'
+  },
+
+  {
+    title: 'Kommande Projekt',
+    image: kommandeImg,
+    text: 'Ett kommande projekt under utveckling.'
   }
 ]
 
