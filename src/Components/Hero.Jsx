@@ -12,7 +12,12 @@ function Hero() {
         <button>Begär offert</button>
         <button>Se våra tjänster</button>
       </div>
+
+
+      
     </section>
+
+    
   )
 }
 

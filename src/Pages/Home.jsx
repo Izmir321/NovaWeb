@@ -1,21 +1,22 @@
 import Hero from '../Components/Hero'
 import Pricing from '../Components/Pricing'
 import Portfolio from '../Components/Portfolio'
-
+import FeatureSection from '../Components/FeatureSection'
 import Partners from '../Components/Partners'
-import Contact from '../Components/Contact'
+import Reviews from '../Components/Reviews'
 
 
 function Home() {
   return (
     <>
       <Hero />
-     
+      <FeatureSection />
       <Pricing />
+     
       <Portfolio />
 
       <Partners />
-      <Contact />
+      <Reviews />
     </>
   )
 }

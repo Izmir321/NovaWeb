@@ -65,7 +65,10 @@ function Pricing() {
   <button>Boka konsultation</button>
 
 </section>
+
     </section>
+
+    
     
   )
 }
