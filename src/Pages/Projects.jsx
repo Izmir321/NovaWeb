@@ -72,7 +72,40 @@ function Projects() {
           ></span>
         ))}
       </div>
+      <section className="templates-section">
+
+  <p>Färdiga templates</p>
+  <h2>Välj en design som passar ditt företag</h2>
+
+  <div className="templates-grid">
+
+<article className="template-card">
+  <img src={restaurangImg} alt="Restaurant Template" />
+  <h3>Restaurang</h3>
+  <p>Perfekt för restauranger med meny, bokning och kontakt.</p>
+  <button>Visa template</button>
+</article>
+
+    <article className="template-card">
+      <img src={gymImg} alt="Gym Template" />
+      <h3>Gym & Fitness</h3>
+      <p>Modern design för gym och träningsstudios.</p>
+      <button>Visa template</button>
+    </article>
+
+    <article className="template-card">
+      <img src={byggImg} alt="Business Template" />
+      <h3>Byggföretag</h3>
+      <p>Professionell företagshemsida med tjänster och offert.</p>
+      <button>Visa template</button>
+    </article>
+
+  </div>
+
+</section>
     </section>
+
+    
   )
 }
 

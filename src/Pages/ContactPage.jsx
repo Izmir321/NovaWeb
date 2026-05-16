@@ -46,6 +46,11 @@ function ContactPage() {
               <h3>Månadsavtal Från 799kr/mån </h3>
               <p>Passar företag som vill ha löpande support och underhåll.</p>
             </article>
+
+             <article>
+              <h3>Färdiga Template</h3>
+              <p>För kunder som vill komma igång snabbt erbjuder vi färdiga templates som kan anpassas med färger, texter, bilder och funktioner efter företagets behov.</p>
+            </article>
             
 
           </div>
@@ -61,6 +66,7 @@ function ContactPage() {
             <option>Startpaket</option>
             <option>Företagspaket</option>
             <option>Månadsavtal</option>
+            <option>Färdig Template</option>
           </select>
 
           <textarea rows="6" placeholder="Berätta kort om ditt projekt..."></textarea>
