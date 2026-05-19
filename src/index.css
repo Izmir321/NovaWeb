@@ -1030,3 +1030,188 @@ button:hover {
 .footer-bottom p {
   color: #64748b;
 }
+
+
+@media (max-width: 768px) {
+  .navbar {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+    padding: 25px 6%;
+  }
+
+  .navbar h1 {
+    justify-self: center;
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    justify-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 80px 6%;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+  }
+
+  .feature-section {
+    padding: 60px 6%;
+  }
+
+  .feature-content h2 {
+    font-size: 2.6rem;
+  }
+}
+
+.page-intro {
+  max-width: 700px;
+  margin-top: 20px;
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+.admin-page {
+  padding: 8rem 10%;
+  min-height: 100vh;
+}
+
+.admin-page p {
+  color: #8b8fff;
+}
+
+.admin-page h1 {
+  font-size: 4rem;
+  margin-bottom: 4rem;
+  color: white;
+}
+
+.requests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.request-card {
+  background: rgba(20, 25, 45, 0.9);
+  border: 1px solid rgba(139, 143, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.request-card:hover {
+  transform: translateY(-5px);
+  border-color: #8b8fff;
+  box-shadow: 0 0 20px rgba(139, 143, 255, 0.15);
+}
+
+.request-card h3 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.request-card p {
+  color: #d6d6d6;
+  margin-bottom: 0.7rem;
+}
+
+.request-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.status-badge {
+  background: rgba(139, 143, 255, 0.15);
+  color: #8b8fff;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.request-message {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.request-card small {
+  display: block;
+  margin-top: 1.5rem;
+  color: #888;
+}
+
+.request-actions {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.5rem;
+}
+
+.request-actions button {
+  background: #5865f2;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.request-actions button:hover {
+  opacity: 0.8;
+}
+
+.status-badge {
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* NY */
+.status-badge.ny {
+  background: rgba(88, 101, 242, 0.2);
+  color: #8b93ff;
+}
+
+/* KONTAKTAD */
+.status-badge.kontaktad {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffd54f;
+}
+
+/* PÅGÅENDE */
+.status-badge.pågående {
+  background: rgba(244, 67, 54, 0.2);
+  color: #ff6b6b;
+}
+
+/* KLAR */
+.status-badge.klar {
+  background: rgba(76, 175, 80, 0.2);
+  color: #81ff8b;
+}

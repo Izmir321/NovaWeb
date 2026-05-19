@@ -6,7 +6,7 @@ import Workflow from './Pages/Workflow'
 import Home from './Pages/Home'
 import Staff from './Pages/Staff'
 import ContactPage from './Pages/ContactPage'
-
+import AdminPage from './Pages/AdminPage'
 function App() {
   return (
     <>
@@ -18,6 +18,7 @@ function App() {
         <Route path="/workflow" element={<Workflow />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/admin" element={<AdminPage />} />
       </Routes>
 
       <Footer />

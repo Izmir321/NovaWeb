@@ -5,6 +5,11 @@ function Staff() {
 
       <h1>Personalen bakom NovaWeb</h1>
 
+   <p className="page-intro">
+        Vårt team kombinerar design, frontend och backend för att skapa moderna och hållbara webblösningar.
+   </p>
+
+
       <div className="staff-grid">
 
         <article className="staff-card">
@@ -51,6 +56,7 @@ function Staff() {
             Arbetar med API:er, databaser och systemutveckling i .NET.
           </p>
         </article>
+
 
       </div>
     </section>
