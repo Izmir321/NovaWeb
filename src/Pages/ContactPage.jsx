@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import toast from 'react-hot-toast'
+
 
 function ContactPage() {
 
@@ -32,7 +34,7 @@ function ContactPage() {
 
       if (response.ok) {
 
-        alert('Förfrågan skickad!')
+       toast.success('Förfrågan skickad!')
 
         setFormData({
           name: '',
@@ -48,7 +50,7 @@ function ContactPage() {
 
     } catch (error) {
       console.error(error)
-      alert('Kunde inte ansluta till servern.')
+      toast.error('Något gick fel.')
     }
   }
 

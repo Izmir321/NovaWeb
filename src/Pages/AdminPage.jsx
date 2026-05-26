@@ -1,8 +1,16 @@
 import { useEffect, useState } from 'react'
-
+import toast from 'react-hot-toast'
 function AdminPage() {
 
+
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedStatus, setSelectedStatus] = useState('Alla')
   const [requests, setRequests] = useState([])
+
+ const totalRequests = requests.length
+ const newRequests = requests.filter(request => request.status === 'Ny').length
+ const ongoingRequests = requests.filter(request => request.status === 'Pågående').length
+ const completedRequests = requests.filter(request => request.status === 'Klar').length
 
   useEffect(() => {
 
@@ -28,7 +36,7 @@ function AdminPage() {
     })
 
     setRequests(
-      requests.map(request =>
+      filteredRequests.map(request =>
         request.id === id
           ? { ...request, status: newStatus }
           : request
@@ -39,7 +47,41 @@ function AdminPage() {
     console.error(error)
   }
 }
+    const filteredRequests = requests.filter(request => {
 
+  const matchesSearch =
+    request.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    request.email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    request.company?.toLowerCase().includes(searchTerm.toLowerCase())
+
+  const matchesStatus =
+    selectedStatus === 'Alla' ||
+    request.status === selectedStatus
+
+  return matchesSearch && matchesStatus
+})
+
+const deleteRequest = async (id) => {
+  const confirmDelete = window.confirm('Vill du verkligen radera denna förfrågan?')
+
+  if (!confirmDelete) {
+    return
+  }
+
+  try {
+    const response = await fetch(`http://localhost:5198/api/ContactRequests/${id}`, {
+      method: 'DELETE'
+    })
+
+    if (response.ok) {
+      setRequests(requests.filter(request => request.id !== id))
+      toast.success('Förfrågan raderad')
+    }
+  } catch (error) {
+    console.error(error)
+    toast.error('Något gick fel')
+  }
+}
   return (
     <section className="admin-page">
 
@@ -47,11 +89,45 @@ function AdminPage() {
 
       <h1>Inkomna kontaktförfrågningar</h1>
 
+      <div className="admin-stats">
+  <article>
+    <h3>{totalRequests}</h3>
+    <p>Totalt</p>
+  </article>
+
+  <article>
+    <h3>{newRequests}</h3>
+    <p>Nya</p>
+  </article>
+
+  <article>
+    <h3>{ongoingRequests}</h3>
+    <p>Pågående</p>
+  </article>
+
+  <article>
+    <h3>{completedRequests}</h3>
+    <p>Klara</p>
+  </article>
+</div>
+
+          <div className="admin-toolbar">
+
+  <input
+    type="text"
+    placeholder="Sök företag eller email..."
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+  />
+
+  
+</div>
+
       <div className="requests-grid">
 
         {requests.map((request) => (
 
-          <article key={request.id} className="request-card">
+          <article key={request.id} className={`request-card ${request.status.toLowerCase()}`}>
 
             
 
@@ -109,6 +185,13 @@ function AdminPage() {
   >
     Klar
   </button>
+
+  <button
+  className="delete-btn"
+  onClick={() => deleteRequest(request.id)}
+>
+  Radera
+</button>
 
 
 </div>
