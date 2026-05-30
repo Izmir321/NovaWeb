@@ -53,7 +53,7 @@ section {
 h1 {
   font-size: 4rem;
   margin-bottom: 20px;
-  color:
+  color: rgb(191, 230, 237);
 }
 
 h2 {
@@ -74,8 +74,8 @@ p {
 button {
   padding: 12px 24px;
   border: none;
-  background: #6366f1;
-  color: white;
+  background: #31991d;  
+  color: rgb(248, 240, 240);
   border-radius: 8px;
   cursor: pointer;
   margin-right: 10px;
@@ -83,7 +83,7 @@ button {
 }
 
 button:hover {
-  background: #4f46e5;
+  background: #66802a;
 }
 
 .navbar {
@@ -173,13 +173,14 @@ button:hover {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 50px;
+  
 }
 
 .portfolio-card {
   background: #111827;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #1e293b;
+  border: 1px solid #d1d7e0;
   transition: 0.3s;
 }
 
@@ -272,8 +273,18 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   background:
-    radial-gradient(circle at top right, rgba(99, 102, 241, 0.25), transparent 35%),
+    radial-gradient(circle at top right, rgba(217, 217, 218, 0.25), transparent 105%),
     #0f44be;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #6366f1;
+  filter: blur(150px);
+  opacity: 0.2;
 }
 
 .hero p:first-child {
@@ -660,25 +671,31 @@ button:hover {
   }
 }
 
-.pricing-card button {
-  margin-top: 30px;
+.package-card button {
   width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 12px;
+  padding: 14px 18px;
+
+  background: rgba(197, 197, 208, 0.12);
+  border: 1px solid rgba(129, 140, 248, 0.2);
+
+  color: #c7d2fe;
+
+  border-radius: 14px;
+
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  transition: all 0.3s ease;
+}
+.package-card button:hover {
   background: #6366f1;
   color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
 
-.pricing-card button:hover {
-  background: #7c83ff;
   transform: translateY(-2px);
-}
 
+  box-shadow:
+    0 10px 25px rgba(99, 102, 241, 0.35);
+}
 .special-package {
   margin-top: 60px;
   padding: 55px 40px;
@@ -733,7 +750,7 @@ button:hover {
   padding: 16px 36px;
   border: none;
   border-radius: 14px;
-  background: #606063;
+  background: #31991d;
   color: white;
   font-size: 1rem;
   font-weight: 600;
@@ -926,7 +943,7 @@ button:hover {
   padding: 0.9rem 1.4rem;
   border: none;
   border-radius: 12px;
-  background: #6366f1;
+  background: #31991d;
   color: white;
   cursor: pointer;
 }
@@ -1314,3 +1331,49 @@ button:hover {
   }
 }
 
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #020617;
+}
+
+.login-card {
+  width: 420px;
+  background: #111827;
+  border: 1px solid rgba(139, 143, 255, 0.2);
+  border-radius: 24px;
+  padding: 40px;
+}
+
+.login-card p {
+  color: #818cf8;
+}
+
+.login-card h1 {
+  color: white;
+  margin-bottom: 25px;
+}
+
+.login-card input {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: white;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: #6366f1;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}

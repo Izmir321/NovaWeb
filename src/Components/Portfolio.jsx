@@ -7,7 +7,7 @@ function Portfolio() {
       <div className="portfolio-grid">
         <article className="portfolio-card">
           <img
-            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4"
             alt="Projekt 1"
             width="300"
           />
@@ -37,7 +37,7 @@ function Portfolio() {
 
         <article className="portfolio-card">
           <img
-            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4"
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
             alt="Projekt 3"
             width="300"
           />

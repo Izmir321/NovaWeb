@@ -16,7 +16,7 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button>Begär offert</button>
+         
           <button>Se våra tjänster</button>
         </div>
       </motion.div>
